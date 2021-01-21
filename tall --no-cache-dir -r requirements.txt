@@ -1,0 +1,21 @@
+[0;1;32m●[0m docker.service - Docker Application Container Engine
+     Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
+     Active: [0;1;32mactive (running)[0m since Thu 2021-01-21 08:47:02 IST; 34s ago
+TriggeredBy: [0;1;32m●[0m docker.socket
+       Docs: https://docs.docker.com
+   Main PID: 30147 (dockerd)
+      Tasks: 11
+     Memory: 41.1M
+     CGroup: /system.slice/docker.service
+             └─30147 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+
+Jan 21 08:47:00 inspiron-3542 dockerd[30147]: time="2021-01-21T08:47:00.911256900+05:30" level=warning msg="Your kernel does not support swap memory limit"
+Jan 21 08:47:00 inspiron-3542 dockerd[30147]: time="2021-01-21T08:47:00.911310961+05:30" level=warning msg="Your kernel does not support cgroup blkio weight"
+Jan 21 08:47:00 inspiron-3542 dockerd[30147]: time="2021-01-21T08:47:00.911326826+05:30" level=warning msg="Your kernel does not support cgroup blkio weight_device"
+Jan 21 08:47:00 inspiron-3542 dockerd[30147]: time="2021-01-21T08:47:00.911678293+05:30" level=info msg="Loading containers: start."
+Jan 21 08:47:01 inspiron-3542 dockerd[30147]: time="2021-01-21T08:47:01.610360996+05:30" level=info msg="Default bridge (docker0) is assigned with an IP address 172.17.0.0/16. Daemon option --bip can be used to set a preferred IP address"
+Jan 21 08:47:01 inspiron-3542 dockerd[30147]: time="2021-01-21T08:47:01.929264571+05:30" level=info msg="Loading containers: done."
+Jan 21 08:47:02 inspiron-3542 dockerd[30147]: time="2021-01-21T08:47:02.478555295+05:30" level=info msg="Docker daemon" commit=8891c58 graphdriver(s)=overlay2 version=20.10.2
+Jan 21 08:47:02 inspiron-3542 dockerd[30147]: time="2021-01-21T08:47:02.478753713+05:30" level=info msg="Daemon has completed initialization"
+Jan 21 08:47:02 inspiron-3542 systemd[1]: Started Docker Application Container Engine.
+Jan 21 08:47:02 inspiron-3542 dockerd[30147]: time="2021-01-21T08:47:02.920380399+05:30" level=info msg="API listen on /run/docker.sock"
