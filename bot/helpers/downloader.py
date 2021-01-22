@@ -1,6 +1,7 @@
 import os
 import wget
 import glob
+import time
 import youtube_dl
 from pySmartDL import SmartDL
 from urllib.error import HTTPError
@@ -8,11 +9,20 @@ from youtube_dl import DownloadError
 from bot import DOWNLOAD_DIRECTORY, LOGGER
 
 
-def download_file(url, dl_path):
+def download_file(url, dl_path,sent_message):
   try:
     dl = SmartDL(url, dl_path, progress_bar=False)
     LOGGER.info(f'Downloading: {url} in {dl_path}')
-    dl.start()
+    dl.start(blocking=False)
+    while not dl.isFinished():
+        #print("Speed: %s" % dl.get_speed(human=True))
+        #print("Already downloaded: %s" % dl.get_dl_size(human=True))
+        #print("Eta: %s" % dl.get_eta(human=True))
+        #print("Progress: %d%%" % (dl.get_progress()*100))
+        sent_message.edit("Progress bar: %s \nProgress: %d%%" % (dl.get_progress_bar(),(dl.get_progress()*100)))
+        #print("Status: %s" % dl.get_status())
+        #print("\n"*2+"="*50+"\n"*2)
+        time.sleep(2)
     return True, dl.get_dest()
   except HTTPError as error:
     return False, error
