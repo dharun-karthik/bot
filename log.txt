@@ -1,0 +1,29 @@
+2021-01-22 09:04:55,730 - __main__ - INFO - Starting Bot !
+2021-01-22 09:06:01,892 - __main__ - INFO - Starting Bot !
+2021-01-22 09:15:13,605 - __main__ - INFO - Starting Bot !
+2021-01-22 09:15:32,311 - root - INFO - Started 6 HandlerTasks
+2021-01-22 09:15:42,299 - bot - INFO - AuthURL:1547037407
+2021-01-22 09:16:12,154 - bot - INFO - AuthSuccess: 1547037407
+2021-01-22 09:16:40,238 - bot - INFO - Download:1547037407: https://mirror.nforce.com/pub/speedtests/25mb.bin
+2021-01-22 09:16:43,282 - bot - INFO - Downloading: https://mirror.nforce.com/pub/speedtests/25mb.bin in ./downloads/
+2021-01-22 09:18:55,896 - pyrogram.dispatcher - ERROR - [Errno 2] No such file or directory: './downloads//./downloads//25mb.bin'
+Traceback (most recent call last):
+  File "/home/dharun/.local/lib/python3.8/site-packages/pyrogram/dispatcher.py", line 210, in handler_worker
+    await self.loop.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/dharun/addrive/bot/plugins/download.py", line 40, in _download
+    sent_message.edit(Messages.DOWNLOADED_SUCCESSFULLY.format(os.path.basename(file_path), humanbytes(os.path.getsize(file_path))))
+  File "/usr/lib/python3.8/genericpath.py", line 50, in getsize
+    return os.stat(filename).st_size
+FileNotFoundError: [Errno 2] No such file or directory: './downloads//./downloads//25mb.bin'
+2021-01-22 09:19:50,023 - root - INFO - Stop signal received (2). Exiting...
+2021-01-22 09:19:50,369 - root - INFO - Stopped 6 HandlerTasks
+2021-01-22 09:19:50,372 - __main__ - INFO - Bot Stopped !
+2021-01-22 09:20:19,491 - __main__ - INFO - Starting Bot !
+2021-01-22 09:20:36,003 - __main__ - INFO - Starting Bot !
+2021-01-22 09:20:44,626 - root - INFO - Started 6 HandlerTasks
+2021-01-22 09:20:55,253 - bot - INFO - Download:1547037407: https://mirror.nforce.com/pub/speedtests/10mb.bin
+2021-01-22 09:20:57,682 - bot - INFO - Downloading: https://mirror.nforce.com/pub/speedtests/10mb.bin in ./downloads/
+2021-01-22 09:21:18,387 - bot - INFO - Upload: ./downloads/10mb.bin
+2021-01-22 09:22:48,895 - bot - INFO - Deleteing: ./downloads/10mb.bin
